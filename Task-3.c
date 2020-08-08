@@ -11,7 +11,7 @@ void stringprint(char[100] , int);
         printf("Enter your input string: ");
         fgets(string, 100, stdin);
         string[strlen(string) - 1] = '\0';
-        printf("Enter '0' for Even and '1' for Odd characters : ");
+        printf("Enter '0' for Even and '1' for Odd characters to display : ");
         scanf("%d",&flag);
         
         stringprint(string,flag);
