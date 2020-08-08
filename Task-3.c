@@ -1,34 +1,46 @@
-/* Task - 3 */
+#include <stdio.h>
+#include <string.h>
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+void stringprint(char[100] , int);
+  int main() 
+  {
+        //User Input
+        char string[100];
+        int flag;
 
-int main()
-    {
-        char str[41];
-        char odd[21];
-        char even[21];
-        char *p = str;
-        int i = 0; 
-        int j = 0;
-        int k = 0;
-    
-        printf("Enter a string (40 characters maximum): ");
-        scanf("%40s" , str);
-    
-        while (*p) 
-            { 
-                if (i % 2 == 0)  
-                odd[j++] = *p;
-                else 
-                even[k++] = *p;
-                p++;
+        printf("Enter your input string: ");
+        fgets(string, 100, stdin);
+        string[strlen(string) - 1] = '\0';
+        printf("Enter '0' for Even and '1' for Odd characters : ");
+        scanf("%d",&flag);
+        
+        stringprint(string,flag);
+     
+        //Print Even Characters
+    /*    stringprint("FEEDBYME",0);    */
+        //Print Odd Characters
+    /*    stringprint("FEEDBYME",1);    */
+  }
+
+void stringprint(char string[100], int flag) 
+    { 
+        char even[100], odd[100], i, j, k;
+        
+        i = j = k = 0;
+        
+        while (string[i] != '\0') {
+                if (i % 2 == 0) {
+                        odd[j++] = string[i];
+                } else {
+                        even[k++] = string[i];
+                }
                 i++;
-            }
-    
-        printf("\nThe even string is: %s", even);
-        printf("\nThe odd string is: %s", odd);
-    
-        return 0;
+        }
+
+        odd[j] = even[k] = '\0';
+
+        if(flag == 1)
+            printf("%s\n", odd);
+        else
+            printf("%s\n", even);
     }
