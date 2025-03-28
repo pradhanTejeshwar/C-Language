@@ -1,17 +1,18 @@
 #include<stdio.h>
-void main()
+main()
 {
-	int n,f,i,j,s=0;
-	printf("Enter the Limit : ");
+	int i,j,n;
+	float s=0,f;
+	printf("Enter the No. ! ");
 	scanf("%d",&n);
 		for(i=1;i<=n;i++)
 			{
-				f=1;
-					for(j=1;j<=i;j++)
-						{
-							f=f*j;
-						}
-				s=s+f;
+				f=0;
+				for(j=1;j<=i;j++)
+					{
+						f=f+j;
+					}
+				s=i/f;
 			}
-	printf("The Sum is %d",s);
+		printf("%f ",s);
 }

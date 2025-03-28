@@ -1,19 +1,19 @@
 #include<stdio.h>
 int fact(int);
-void main ()
+int main()
 {
-	int n,z;
+	int n;
 	printf("Enter a Number : ");
 	scanf("%d",&n);
-	z=fact(n);
-	printf("Factorial : %d",z);
+	n=fact(n);
+	printf("Factorial is = %d",n);
 }
-	int fact(int x)
-		{
-			int i,f=1;
-			for(i=1;i<=x;i++)
-				{
-					f=f*i;
-				}
-			return f;
-		}
+int fact(int a)
+{
+	int i,f=1;
+		for(i=1;i<=a;i++)
+			{
+				f=f*i;
+			}
+		return f;
+}

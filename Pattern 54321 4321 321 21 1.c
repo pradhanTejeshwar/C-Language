@@ -1,13 +1,22 @@
+
 #include<stdio.h>
 main()
 {
-	int i,j;
-		for(i=5;i>=1;i--)
+	int i,j,c=1;
+		for(i=1;i<=5;i++)
 			{
-				for(j=i;j>=1;j--)
+				for(j=1;j<=i;j++)
 					{
-						printf("%d ",j);
+						if(i%2 != 0)
+							{
+								printf("%d",c);
+								c++;
+							}
+						else
+						{
+							printf("*");
+						}
 					}
-				printf("\n");
+			printf("\n");
 			}
 }
